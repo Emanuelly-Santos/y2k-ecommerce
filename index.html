@@ -10,38 +10,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <div class="y2k">Y2k Store</div>
-            </div>
+        </div>
         <div class="search">
             <input type="text" id="searchInput" placeholder="O que você procura?" class="search-input">
             <button id="searchBtn" class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#contato">Contato</a>
-            
-        </nav>
-        <ul>
-           <li><svg width="22px" height="800px" viewBox="0 0 15 15" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.5 0.5L1.1 2.5M1.1 2.5L3.5 10.5H14.5V4.5C14.5 3.39543 13.6046 2.5 12.5 2.5H1.1ZM12.5 14.5C11.9477 14.5 11.5 14.0523 11.5 13.5C11.5 12.9477 11.9477 12.5 12.5 12.5C13.0523 12.5 13.5 12.9477 13.5 13.5C13.5 14.0523 13.0523 14.5 12.5 14.5ZM4.5 13.5C4.5 12.9477 4.94772 12.5 5.5 12.5C6.05228 12.5 6.5 12.9477 6.5 13.5C6.5 14.0523 6.05228 14.5 5.5 14.5C4.94772 14.5 4.5 14.0523 4.5 13.5Z" stroke="#000000"/>
-            </svg></li>
-            <li><svg fill="#fff" width="25px" height="800px" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
-            <g transform="translate(-546.269 -195.397)">
-            <path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/>
-            <path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/>
-            <path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/>
-            </g>
-            </svg></li>
-        </ul>
+
+        <div class="nav">
+            <nav>
+                <a href="#">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+
+        <div class="icones">
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg fill="#fff" width="23px" height="23px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>icn/menu</title><path d="M2 3h12a1 1 0 0 1 0 2H2a1 1 0 1 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 1 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2z" id="a"/></svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                <li><svg width="22px" height="22px" viewBox="0 0 15 15" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 0.5L1.1 2.5M1.1 2.5L3.5 10.5H14.5V4.5C14.5 3.39543 13.6046 2.5 12.5 2.5H1.1ZM12.5 14.5C11.9477 14.5 11.5 14.0523 11.5 13.5C11.5 12.9477 11.9477 12.5 12.5 12.5C13.0523 12.5 13.5 12.9477 13.5 13.5C13.5 14.0523 13.0523 14.5 12.5 14.5ZM4.5 13.5C4.5 12.9477 4.94772 12.5 5.5 12.5C6.05228 12.5 6.5 12.9477 6.5 13.5C6.5 14.0523 6.05228 14.5 5.5 14.5C4.94772 14.5 4.5 14.0523 4.5 13.5Z" stroke="#000000"/>
+                    </svg></li>
+                    <li><svg fill="#fff" width="25px" height="25px" viewBox="0 0 30.586 30.586" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(-546.269 -195.397)">
+                    <path d="M572.138,221.245a15.738,15.738,0,0,0-21.065-.253l-1.322-1.5a17.738,17.738,0,0,1,23.741.28Z"/>
+                    <path d="M561.464,204.152a4.96,4.96,0,1,1-4.96,4.96,4.966,4.966,0,0,1,4.96-4.96m0-2a6.96,6.96,0,1,0,6.96,6.96,6.96,6.96,0,0,0-6.96-6.96Z"/>
+                    <path d="M561.562,197.4a13.293,13.293,0,1,1-13.293,13.293A13.308,13.308,0,0,1,561.562,197.4m0-2a15.293,15.293,0,1,0,15.293,15.293A15.293,15.293,0,0,0,561.562,195.4Z"/>
+                    </g>
+                    </svg></li>
+        </div>
     </header>
     <main>
         <section>
@@ -56,7 +71,7 @@
                         <p class="product-tag">Alto conforto</p>
                         <h2 class="product-name">Chunky DC Shoes</h2>
                         <p class="description">Tênis caracterizado por um design volumoso inspirado nos anos 2000, oferecendo máximo acolchoamento, durabilidade e uma estética nostálgica Y2K.</p>
-                        <button class="btn">Compre agora</button>
+                        <button class="btnBuy">Compre agora</button>
                     </div>
                 </div>
 
@@ -69,7 +84,7 @@
                         <p class="product-tag">Design Icônico</p>
                         <h2 class="product-name">Prada Star Sunglasses</h2>
                         <p class="description">Óculos reconhecido pelo design shield sem aros, caracterizado por estrelas parafusadas nas laterais das lentes. Esta peça vintage Y2K apresenta hastes finas, lentes curvas abrangentes e um estilo arrojado.</p>
-                        <button class="btn">Compre agora</button>
+                        <button class="btnBuy">Compre agora</button>
                     </div>
                 </div>
 
@@ -82,7 +97,7 @@
                         <p class="product-tag">Estilo Autêntico</p>
                         <h2 class="product-name">Casaco Vintage</h2>
                         <p class="description">Jaqueta de veludo streetwear, marcada por uma pegada urbana forte e identidade visual impactante. A textura plush traz sofisticação ao visual, equilibrando conforto e estilo.</p>
-                        <button class="btn">Compre agora</button>
+                        <button class="btnBuy">Compre agora</button>
                     </div>
                 </div>
             </div>
@@ -364,6 +379,7 @@
 
         </footer>
     </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-<script src="script.js"></script>
 </html>

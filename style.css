@@ -11,80 +11,103 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     background: #000000;
     height: 90px;
     position: relative;
-    padding: 0 40px 0 20px;
+    padding: 40px 40px;
+}
 
-    ul {
-        display: flex;
-        gap: 33px;
-    }
+header ul {
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
 
-    li {
-        cursor: pointer;
-        margin-top: 30px;
-    }
+header li {
+    cursor: pointer;
+}
 
-    nav {
-        display: flex;
-        gap: 80px;
-        left: 65%;
-        margin-top: 30px;
-    }
+header nav {
+    display: flex;
+    gap: 80px;
+    left: 65%;
+    margin: 0;
+}
 
-    a {
-        text-decoration: none;
-        color: #fff;
-        position: relative;
-        display: inline-block;
-    }
+header a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
 
-    a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: rgb(149, 46, 158);
-        transition: width 0.3s ease;
-    }
+header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(149, 46, 158);
+    transition: width 0.3s ease;
+}
 
-    a:hover::after {
-        width: 100%;
-    }
+header a:hover::after {
+    width: 100%;
+}
+
+header .dropdown {
+    margin: 0;
+    padding: 0;
+    display: none;
 }
 
 body {
-    background: #fff;                                                  
+    background: #fff;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
-} 
+}
 
 section {
     position: relative;
+    display: block;
 }
 
 .logo {
     display: flex;
+    align-items: center;
+}
+
+.y2k {
+    color: #9a5bc4;
+    font-family: "Bitcount Single", system-ui;
+    font-size: 2.4em;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px #ff009d;
+    position: absolute;
 }
 
 .search {
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
 }
 
 .search-input {
     border: none;
     border-bottom: 1px solid #fff;
-    width: 500px;
+    width: 100%;
     padding: 10px;
     outline: none;
     font-size: 15px;
     background-color: transparent;
-    top: 28%;
     margin-left: 190px;
+    height: 35px;
+    color: #fff;
 }
 
 .search-btn {
@@ -94,27 +117,18 @@ section {
     font-size: 14px;
     color: #fff;
     left: 52%;
-    margin-top: 2%;
-}
-
-.y2k {
-    color: #9a5bc4;
-    font-family: "Bitcount Single", system-ui;
-    font-size: 2.5em;
-    font-weight: 400;
-    text-shadow: 1px 1px 3px #ff009d;
-    position: absolute;
-    top: 34%;
-    left: 3%;
 }
 
 .list {
+    background: #000000;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    display: flex;
+    max-width: 100%;
+    padding: 20px;
     position: relative;
-    background: #000000;   
-    width: 100%;      
-    height: 600px;   
-    margin: 0 auto;    
-    z-index: 0;     
+    height: 600px;
 }
 
 .item {
@@ -124,7 +138,6 @@ section {
     justify-content: center;
     align-items: center;
     opacity: 0;
-
     transform: translateX(100vw);
     transition: 0.7s ease-in-out, opacity 0.7s ease-in-out;
 }
@@ -146,8 +159,8 @@ section {
 }
 
 .product-img img {
-    width: 480px;
-    height: 580px;
+    max-width: 500px;
+    max-height: 500px;
     filter: drop-shadow(0 0 20px rgba(149, 46, 158, 0.808));
     z-index: 1;
 
@@ -198,13 +211,13 @@ h2 {
     z-index: 5;
 }
 
-.btn {
+.btnBuy {
     border-radius: 30px;
     padding: 12px 10px;
-    background: transparent;                                                                                     
+    background: transparent;
     border: 3px solid #9a5bc4;
     font-size: 1rem;
-    font-weight:5600;
+    font-weight: 600;
     cursor: pointer;
     color: #fff;
 }
@@ -232,7 +245,7 @@ h2 {
 }
 
 .arrow-btn:hover {
-    background-color: #1b1b1b;
+    background-color: rgba(149, 46, 158, 0.527);
 }
 
 .produtos {
@@ -301,7 +314,7 @@ h3 {
 }
 
 .menu-grid button {
-    background: linear-gradient(90deg, #f556d8,#d279c2,#e199c6);
+    background: linear-gradient(90deg, #f556d8, #d279c2, #e199c6);
     padding: 5px 20px 5px;
     border: none;
     cursor: pointer;
@@ -315,7 +328,7 @@ h3 {
 }
 
 .menu-grid button:hover {
-    background: linear-gradient(90deg, #eb64d0,#d37ec3,#bb4e91);
+    background: linear-gradient(90deg, #eb64d0, #d37ec3, #bb4e91);
 }
 
 .contato {
@@ -360,12 +373,14 @@ footer {
     height: 240px;
     flex-direction: column;
     font-weight: 480;
+    display: flex;
 }
 
 footer h4 {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 1rem;
+    font-weight: 700;
 }
 
 footer img {
@@ -393,4 +408,107 @@ footer p {
     margin-bottom: 5px;
     color: #fff;
     cursor: pointer;
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 480px) {
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 10px;
+        row-gap: 10px;
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .dropdown {
+        display: block;
+    }
+
+    .y2k {
+        position: relative;
+        font-size: 1.4em;
+    }
+
+    .search {
+        order: 3;
+        width: 70%;
+        max-width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .search-input {
+        margin: auto;
+        font-size: 12px;
+    }
+
+    .icones ul {
+        gap: 15px;
+    }
+
+    .list {
+        flex-direction: column;
+        height: 320px;
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .item {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-img img {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .description {
+        font-size: 0.5em;
+        max-width: 220px;
+        text-align: left;
+    }
+
+    .product-tag {
+        font-size: 0.6em;
+        text-align: left;
+    }
+
+    .btnBuy {
+        font-size: 0.6rem;
+        padding: 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        display: flex;
+        height: auto;
+        text-align: left;
+    }
+
+    footer .information {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
