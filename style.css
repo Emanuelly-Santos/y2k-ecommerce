@@ -270,7 +270,7 @@ h2 {
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
-    filter: drop-shadow(0 0 15px rgb(149, 46, 158));
+    filter: drop-shadow(0 0 8px rgb(149, 46, 158));
 }
 
 .menu-grid li {
@@ -570,6 +570,10 @@ footer p {
     .menu-grid button {
         padding: 3px;
         bottom: 8px;
+    }
+
+    .menu-grid {
+        
     }
 
     .produtos h2 {

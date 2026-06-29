@@ -1,2 +1,15 @@
 # Y2k E-commerce
-E-commerce interface built with HTML, CSS and JavaScript.
+
+E-commerce interface inspired by 2000s (Y2K) Fashion. I built this project to practice and improve my web development skills.
+
+# Technologies used:
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+
+# Features:
+
+- [x] Carousel
+-
